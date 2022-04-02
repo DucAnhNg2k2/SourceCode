@@ -80,5 +80,4 @@ int main()
 		}
 	cin >> a >> b >> c >> d;
 	a++;b++;c++;d++;
-	BFS(a,b);
-} 
+	BFS(a,b

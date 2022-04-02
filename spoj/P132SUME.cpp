@@ -20,7 +20,7 @@ const LL Linf = (LL) 1e18;
 const LL MOD = 1000000007LL;
 #define PI 3.141592653589793238;
 #define maxn 100005
-
+ 
 struct point
 {
     double x, y;
@@ -41,7 +41,7 @@ double S_triangle(int x1,int y1,int x2,int y2,int x3,int y3)
 	double p = (a+b+c)/2;
 	return sqrt(p*(p-a)*(p-b)*(p-c));
 }
-
+ 
 int ccw(point a, point b, point c) {
     point p1, p2;
     p1.x = b.x - a.x;
@@ -54,7 +54,7 @@ int ccw(point a, point b, point c) {
     else if (cross_product(p1, p2) < 0) return -1;
     else return 0;
 }
-
+ 
 void solve() {
 	point a,b,c;
 	cin >> a.x >> a.y >> b.x >> b.y >> c.x >> c.y;
@@ -74,13 +74,9 @@ void solve() {
 }
  
 int main() {
-//#ifndef ONLINE_JUDGE
-//    freopen("test.in","r",stdin);
-//    freopen("test.out","w",stdout);
-//#endif
 	int T = 1;
 //	cin >> T;
 	while( T-- )
     	solve();
     return 0;
-}
+} 

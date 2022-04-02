@@ -59,7 +59,10 @@ void solve() {
 		v.push_back(st.top());
 		st.pop();
 	}
-
+//	for(int i = 0 ; i < v.size() ; i++ ) {
+//		cout << v[i] << ' ' ;
+//	}
+//	cout << endl;
 	stack<long long> ss;
 	for(int i = 0 ; i < v.size() ; i++ ) {
 		if( v[i][0] >= '0' && v[i][0] <= '9' ) {
@@ -72,6 +75,7 @@ void solve() {
 			else if( v[i] == "-" ) s2 -= s1;
 			else if( v[i] == "*" ) s2 *= s1;
 			else s2 /= s1;
+		//	cout << s1 << ' ' << v[i] << endl;
 			ss.push(s2);
 		}
 	}
@@ -80,6 +84,7 @@ void solve() {
  
 int main() {
 	ios_base::sync_with_stdio(false);cin.tie(NULL);
+//	freopen("TEST.txt","r",stdin);
 	int t;
 	cin >> t;
 	while( t-- ) {

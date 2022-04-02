@@ -19,7 +19,7 @@ const int infi = 1e9;
 const LL Linfi = (LL) 1e12;
 const LL MOD = 1000000007;
 #define maxn 10005
-// https://www.spoj.com/PTIT/problems/P205PROH/
+ 
 struct Node {
 	bool dd[26];
 	Node() {
@@ -53,7 +53,7 @@ struct SegmentTree {
 	}
 	void build(int p,int L,int R) {
 		if( L == R ) {
-			st[p].dd[ A[L] - 'a' ] = true ;
+			st[p].dd[ A[L-1] - 'a' ] = true ;
 			return;
 		}
 		int M = (L+R)/2;
@@ -79,7 +79,7 @@ struct SegmentTree {
 			return ;
 		if( L == R ) {
 			st[p] = Node();
-			st[p].dd[ A[L] - 'a' ] = true;
+			st[p].dd[ A[L-1] - 'a' ] = true;
 			return;
 		}
 		int M = (L+R)/2;
@@ -100,9 +100,6 @@ char s[1000005];
 void solve() {
 	scanf("%s",s);
 	int n = strlen(s);
-	for(int i = n ; i >= 1 ; i-- ) {
-		s[i] = s[i-1];
-	}
 	SegmentTree st(s,n);
 	int q;
 	scanf("%d",&q);
@@ -112,7 +109,7 @@ void solve() {
 		if( choose == 1 ) {
 			int i; char c;
 			cin >> i >> c;
-			s[i] = c;
+			s[i-1] = c;
 			st.update(i);
 		}
 		else {
@@ -130,10 +127,10 @@ void solve() {
  
 int main(){
   // ios::sync_with_stdio(false);
-//#ifndef ONLINE_JUDGE
-//    freopen("test.in","r",stdin);
-//    freopen("test.out","w",stdout);
-//#endif
+#ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+#endif
     solve();
     return 0;
 } 

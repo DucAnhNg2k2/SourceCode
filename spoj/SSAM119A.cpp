@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 vector<long long> v;
 void Init() {
 	queue<long long> q;
@@ -37,4 +37,4 @@ int main()
 			}
 		}
 	}
-}
+} 

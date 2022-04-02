@@ -1,7 +1,7 @@
 // main
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 struct Node{
 	int dem1 , dem2 , dem3 ;
 	Node(int dem1,int dem2,int dem3)
@@ -11,7 +11,7 @@ struct Node{
 		this->dem3=dem3;
 	}
 };
-
+ 
 bool check(int begin,int end,vector<Node> &v)
 {
 	if (
@@ -21,7 +21,7 @@ bool check(int begin,int end,vector<Node> &v)
 	return true;
 	return false;
 }
-
+ 
 int Bin_search(vector<Node> &v,int &first)
 {
 	int l = first+5 , r = v.size()-1 , pos = -1;
@@ -40,7 +40,7 @@ int Bin_search(vector<Node> &v,int &first)
 	}
 	return pos;
 }
-
+ 
 int main()
 {
 	ios_base::sync_with_stdio(false);cin.tie(NULL);
@@ -65,4 +65,4 @@ int main()
 		dem += (s.size()-1-pos+1);
 	}
 	cout << dem ;
-}
+} 

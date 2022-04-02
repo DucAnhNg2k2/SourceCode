@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 int n,m,s[1000005];
 void BFS() {
 	queue<pair<int,int> > q;
@@ -30,4 +30,4 @@ int main() {
 		s[i] = 10000000;
  	}
  	BFS();
-}
+} 

@@ -1,6 +1,6 @@
 #include<bits/stdc++.h> 
 using namespace std;
-
+ 
 string s ;
 int n , f[1000005][5];
 int main()
@@ -53,4 +53,4 @@ int main()
     }
     cout << f[v.size()-1][1] ;
 } 
- 
+  

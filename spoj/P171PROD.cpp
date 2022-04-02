@@ -20,14 +20,14 @@ const LL Linf = (LL) 1e18;
 const LL MOD = 1000000007LL;
 #define PI 3.141592653589793238;
 #define maxn 1000005
-
+ 
 pLL p[maxn];
-
+ 
 bool cmp(pLL a,pLL b) {
 	if( a.fi == b.fi ) return a.se < b.se;
 	return a.fi < b.fi;
 }
-
+ 
 void solve() {
 	int n , dem = 0;
 	cin >> n;
@@ -56,4 +56,4 @@ int main() {
 	while( T-- )
     	solve();
     return 0;
-}
+} 

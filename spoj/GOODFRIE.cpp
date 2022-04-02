@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 typedef long long ll;
 typedef pair<int,int> ii;
-
+ 
 #define FOR(i,a,b) for(int i = a ; i <= b ; ++i )
 #define std_sort(a,l,r) sort(a.begin()+l,a.begin()+l+r); 
 #define pb push_back
@@ -24,7 +24,7 @@ int main()
 		v[i] = v[i-1];
 		v[i][s[i].size()]++;
 	}
-
+ 
 	ll cnt = 0;
 	FOR(i,1,n)
 	{
@@ -33,3 +33,4 @@ int main()
 	}
 	cout << cnt ;
 }
+ 

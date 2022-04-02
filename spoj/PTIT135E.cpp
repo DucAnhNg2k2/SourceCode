@@ -12,19 +12,19 @@
 #define debug cout << "YES" << endl
 #define all(x) x.begin(),x.end()
 using namespace std;
-
+ 
 typedef pair<int,int> pII;
 typedef pair<LL,LL> pLL;
 const int inf = 1e9;
 const LL Linf = (LL) 1e18;
 const LL MOD = 1000000007LL;
 #define maxn 100005
-
+ 
 string s;
 set<string> arr;
 int a[300] = {};
 bool b[300] = {};
-
+ 
 void Try(string ans,int i) {
 	if( i == s.size()) {
 		arr.insert(ans);
@@ -44,7 +44,7 @@ void Try(string ans,int i) {
 	}
 	Try(ans+s[i],i+1);
 }
-
+ 
 void solve() {
 	cin >> s;
 	stack<int> st;
@@ -59,7 +59,7 @@ void solve() {
 	arr.erase(s);
 	for(auto i:arr) cout << i << endl;
 }
-
+ 
 int main() {
     ios::sync_with_stdio(false);
 #ifndef ONLINE_JUDGE
