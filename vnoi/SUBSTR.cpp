@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct KMP {
+struct Hash {
 	string s;
 	long long base , n , he_so ;
 	vector<long long> Pow , hash ;
-	KMP(const string &_s,const int &_he_so,const long long& _base) {
+	Hash(const string &_s,const int &_he_so,const long long& _base) {
 		s = _s;
 		he_so = _he_so;
 		base = _base;
@@ -42,7 +42,7 @@ int main() {
 	string s1 , s2 ;
 	cin >> s1 >> s2;
 	int n = s1.size() , m = s2.size();
-	KMP str1(s1,26,23052002) ;
+	Hash str1(s1,26,23052002) ;
 	s1 = ' ' + s1;
 	s2 = ' ' + s2;
 	long long hashP = 0;
